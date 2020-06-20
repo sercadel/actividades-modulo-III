@@ -1,0 +1,6 @@
+13-10-2019 - 16:33:59 | El usuario Juan ha accedido al sistema.
+13-10-2019 - 16:34:11 | El usuario Luisa ha accedido al sistema.
+13-10-2019 - 16:34:21 | El usuario Antonio ha accedido al sistema.
+13-10-2019 - 16:34:45 | Intento fallido de acceso del usuario Juan.
+13-10-2019 - 16:34:58 | Intento fallido de acceso del usuario Luisa.
+13-10-2019 - 16:35:14 | Intento fallido de acceso del usuario Antonio.

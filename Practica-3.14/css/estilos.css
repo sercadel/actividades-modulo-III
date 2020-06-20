@@ -1,0 +1,292 @@
+.contenedor {
+    margin: auto;
+    width: 100%;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+#cuerpo {
+    display: flex;
+}
+
+.formulario {
+    margin: auto 4px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    flex: 3 1 60%;
+    order: 2;
+}
+
+.resultado {
+    margin: auto;
+    min-height: 120px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.estadisticas {
+    margin: auto 4px;
+    padding: 10px;
+    flex: 1 6 20%;
+    order: 2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: auto;
+}
+
+.flex-column {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.flex-item {
+    display: flex;
+    align-items: baseline;
+}
+    
+input[type=radio] {
+    flex: none;
+    margin-right: 10px;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #536872;
+    color: white;
+    padding: 14px 20px;
+    margin: 2% auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type=submit]:hover {
+    background-color: #323f45;
+}
+
+/* Posición del texto*/
+.izquierda {
+    text-align: left;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.derecha {
+    text-align: right;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+
+/*
+ 
+ ##############################################
+*/
+
+#cuerpo {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+}
+    
+#cuerpo > article {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #cccc33;
+    border-radius: 7pt;
+    background: #dddd88;
+    flex: 3 1 60%;
+    order: 2;
+}
+
+#cuerpo > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+header, footer {
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 50px;
+    border: 1px solid #eebb55;
+    border-radius: 7pt;
+}
+
+/* Si la pantalla es demasiado estrecha para mostrar los objetos */
+ @media all and (max-width: 640px) {
+
+    #cuerpo {
+    flex-flow: column;
+    }
+
+    /* Restablece el orden de los elementos*/
+    #cuerpo > article, #cuerpo > nav, #cuerpo > aside {
+    order: 0;
+    }
+
+    .opciones {
+        flex-wrap: wrap;
+    }
+}
+
+
+/*
+ Estilo de la tabla
+ ##############################################
+*/
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+table * {
+    position: relative;
+}
+table td, table th {
+    padding-left: 10px;
+}
+table th {
+    font-size: 20px;
+}
+table thead tr {
+    height: 60px;
+    background: #808586;
+    color: #fff;
+}
+table tbody tr {
+    height: 30px;
+}
+table tbody tr:last-child {
+    border: 0;
+}
+table td, table th {
+    text-align: left;
+}
+
+
+
+
+
+/*
+ Botón de entrada Selector único circular
+ ##############################################
+*/
+/* Contenedor del selector personalizado */
+.opcion-circulo {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+/* Oculta el botón de opción predeterminado del navegador */
+.opcion-circulo input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+/* Crea el botón de opción personalizado */
+.visto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+  
+/* Al pasar el ratón por encima, cambia el color de fondo */
+.opcion-circulo:hover input ~ .visto {
+    background-color: #999;
+}
+  
+/* Al pulsar en el botón de opción, cambia el color de fondo */
+.opcion-circulo input:checked ~ .visto {
+    background-color: rgb(51, 185, 39);
+}
+  
+/* Crea el indicador (punto centro - oculto cuando no está marcado) */
+.visto:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Muestra el indicador visto (punto centro), al seleccionarlo */
+.opcion-circulo input:checked ~ .visto:after {
+    display: block;
+}
+  
+/* Estilo del indicador visto (punto centro) */
+.opcion-circulo .visto:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+
+/*
+ Botones de borrar, restablecer, eliminar, etc.
+ ##############################################
+*/
+input.restablecer,
+input.borrar,
+input.eliminar {
+    background-color: #b00;
+}
+
+input.restablecer:hover,
+input.borrar:hover,
+input.eliminar:hover {
+    background-color: #700;
+}

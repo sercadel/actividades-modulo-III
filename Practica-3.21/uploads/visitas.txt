@@ -1,0 +1,9 @@
+
+<b>Mr Blue</b>
+Enhorabuena, la página web me ha parecido muy interesante.<br>Le pongo un 10.
+
+<b>Mr Green</b>
+No esta mal.<br>Yo lo habría hecho mejor.
+
+<b>Mr Brown</b>
+Una página interesante, además de bien programada.
